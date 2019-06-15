@@ -1,0 +1,59 @@
+body {
+    background-image: url(../images/background1.jpg);
+    background-size: cover;
+}
+
+footer.footer {
+    /* background-color: teal; */
+    margin-top: 5% !important; 
+    min-height: 50px;
+    text-align: center;
+    color: white;
+}
+
+/* FontAwesome for working BootSnippet :> */
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #108d6f;
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: rgb(40, 40, 107);
+    border-color: rgb(40, 40, 107);
+}
+
+
+.card {
+    border: none;
+    background-color: rgb(255, 255, 255, .3); 
+}
+
+.aboutMeCard {
+    margin-top: 150px;
+    min-height: 312px;
+
+
+}
+
+.aboutMeCard::before {
+    opacity: .5 !important;
+}
+
+
+
+
+.frontside .card .card-title {
+    color: rgb(40, 40, 107) !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
