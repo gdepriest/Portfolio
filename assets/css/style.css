@@ -1,10 +1,10 @@
 body {
     background-image: url(../images/background1.jpg);
     background-size: cover;
+    font-family: 'Poppins', sans-serif;
 }
 
 footer.footer {
-    /* background-color: teal; */
     margin-top: 5% !important; 
     position: absolute;
     bottom: 0;
@@ -18,9 +18,7 @@ h1 {
 }
 
 
-/* FontAwesome for working BootSnippet :> */
 
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 .btn-primary:hover,
 .btn-primary:focus {
     background-color: palevioletred;
@@ -93,16 +91,13 @@ a {
 }
 
 .projCard {
-   margin-top: 15px;
+   margin: 20px; 
+   border-radius: 25% !important;
 }
 
-/* .close {
-    color: whitesmoke !important;
-    background-color: rgb(40, 40, 107, .8) !important;
-    border-color: rgb(40, 40, 107, .8) !important;
-    padding: 5px !important;
-    cursor: pointer;
-    font-size: 16px !important;
-    
-} */
+.projInfo {
+    background-color: rgb(40, 40, 107, .7) !important;
+}
+
+
 
