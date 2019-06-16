@@ -54,26 +54,39 @@ $("#portfolio-btn").on("click", function() {
        
        var cardImg = $("<img>").attr("src", projImage).attr("alt", "project screen capture").addClass("card-img");
 
-    //    var cardOverlay = $("<div>").addClass("card-img-overlay");
-    //    var cardTitle = $("<h4>").addClass("card-title").text(projTitle);
-    //    var cardSumm = $("<p>").addClass("card-text").text(projSumm);
-    //    $(cardOverlay).append(cardTitle);
-    //    $(cardOverlay).append(cardSumm);
+       var cardOverlay = $("<div>").addClass("projInfo card-img-overlay").hide();
+       var cardTitle = $("<h4>").addClass("card-title").text(projTitle);
+       var cardSumm = $("<p>").addClass("card-text").text(projSumm);
+       $(cardOverlay).append(cardTitle);
+       $(cardOverlay).append(cardSumm);
 
        $(card).append(cardImg);
-    //    $(card).append(cardOverlay);
+       $(card).append(cardOverlay);
        $(hRef).append(card);
 
-       $(".modal-body").append(hRef);   
+       $(".modal-body").append(hRef);  
+       
+       function infoShow() {
+            $(cardOverlay).slideDown();
+       };
+
+       function infoHide() {
+           $(cardOverlay).slideUp();
+       };
+
+       $(hRef).hover(infoShow, infoHide);
+
+       
     
     })
 })
 
-$(".close").on("click", function() {
+$(".close-btn").on("click", function() {
     $("#aboutMeCard").show();
     $(".modal").slideUp();
     $("#modalTitle").empty();
     $(".modal-body").empty();
+    $(".submit-btn").remove();
 
 })
 
@@ -110,6 +123,8 @@ $("#contact-btn").on("click", function() {
 
     $(".modal-body").append(form);
 
+    var submitBtn = $("<button>").addClass("submit-btn btn btn-primary btn-sm").attr("type", "submit").text("Submit");
+    $(".modal-footer").prepend(submitBtn);
 
 
 })
