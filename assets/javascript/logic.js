@@ -58,6 +58,7 @@ $(".close").on("click", function() {
     $("#aboutMeCard").show();
     $(".modal").slideUp();
     $("#modalTitle").empty();
+    $(".modal-body").empty();
 
 })
 
