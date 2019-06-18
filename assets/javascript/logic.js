@@ -35,19 +35,20 @@ var portfolioInfo = [
 
 //Firebase
 
-// var firebaseConfig = {
-//     apiKey: "AIzaSyCFQnQO4kHjqQRnu7SeWj-4kL9YIEaFbII",
-//     authDomain: "testing-testing-84a4d.firebaseapp.com",
-//     databaseURL: "https://testing-testing-84a4d.firebaseio.com",
-//     projectId: "testing-testing-84a4d",
-//     storageBucket: "testing-testing-84a4d.appspot.com",
-//     messagingSenderId: "813376100953",
-//     appId: "1:813376100953:web:5453e22a0437e313"
-// };
-//         // Initialize Firebase
-// firebase.initializeApp(firebaseConfig);
+const firebaseConfig = {
+    apiKey: "AIzaSyDYD0jQpnJMUGnRegSxbWmtPwnmVxB0AK8",
+    authDomain: "bootcampproject-acf6e.firebaseapp.com",
+    databaseURL: "https://bootcampproject-acf6e.firebaseio.com",
+    projectId: "bootcampproject-acf6e",
+    storageBucket: "bootcampproject-acf6e.appspot.com",
+    messagingSenderId: "303278467329",
+    appId: "1:303278467329:web:317676de3cdd17f9"
+};
 
-// var database = firebase.database();
+firebase.initializeApp(firebaseConfig);
+
+
+var database = firebase.database();
 
 //On click of portfolio button, slide down modal, display portfolio information
 
@@ -139,28 +140,35 @@ $("#contact-btn").on("click", function() {
 
     $(".modal-body").append(form);
 
-    var submitBtn = $("<button>").addClass("submit-btn btn btn-primary btn-sm").attr("type", "submit").text("Submit");
+    var submitBtn = $("<button>").addClass("submit-btn btn btn-primary btn-sm").attr("id", "submit").attr("type", "submit").text("Submit");
     $(".modal-footer").prepend(submitBtn);
 
-})
-
-$(".submit-btn").on("click", function(event) {
-    event.preventDefault();
+    $("#submit").on("click", function(event) {
+        event.preventDefault();
+        console.log("submit works");
+        
+        var nameInput = $("#nameInput").val().trim();
+        var emailInput = $("#emailInput").val().trim();
+        var textInput = $("#textInput").val().trim();
     
-    var nameInput = $("#nameInput").val().trim();
-    var emailInput = $("#emailInput").val().trim();
-    var textInput = $("#textInput").val().trim();
-
-    var newMessage = {
-        name: nameInput,
-        email: emailInput,
-        msg: textInput,
-    }
-
-    database.ref().push(newMessage);
-
-    $("#nameInput").val("");
-    $("#emailInput").val("");
-    $("#textInput").val("");    
+        
+        var newMessage = {
+            name: nameInput,
+            email: emailInput,
+            msg: textInput,
+        }
+    
+        database.ref().push(newMessage);
+    
+        alert("Thanks!  I'll be in touch soon!")
+    
+    
+    
+        $("#nameInput").val("");
+        $("#emailInput").val("");
+        $("#textInput").val("");    
+    
+    })
 
 })
+
