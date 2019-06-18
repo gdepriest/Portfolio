@@ -15,6 +15,11 @@ footer.footer {
 
 h1 {
     color: whitesmoke !important;
+    font-size: 25px !important;
+}
+
+h2 {
+    color: rgb(40, 40, 107);
 }
 
 
@@ -37,6 +42,7 @@ h1 {
 .nav-btn {
     margin-right: 15px; 
     background-color: rgb(40, 40, 107, 0.0);
+    font-size: 20px !important;
     border: none;
     cursor: pointer;
 }
@@ -54,8 +60,6 @@ h1 {
 .aboutMeCard {
     margin-top: 150px;
     min-height: 312px;
-
-
 }
 
 .aboutMeCard::before {
@@ -92,12 +96,24 @@ a {
 
 .projCard {
    margin: 20px; 
-   border-radius: 25% !important;
 }
 
 .projInfo {
     background-color: rgb(40, 40, 107, .7) !important;
+    border-radius: 1.2%;
 }
 
+p {
+    font-size: 17px;
+    line-height: 1.2;
+}
+
+#aboutMeTxt {
+    color: rgb(40, 40, 107);
+}
+label {
+    color: rgb(40, 40, 107);
+    font-size: 18px;
+}
 
 
