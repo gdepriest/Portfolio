@@ -16,7 +16,8 @@ footer.footer {
 
 h1 {
     color: whitesmoke !important;
-    font-size: 25px !important;
+    font-family: 'Lobster', serif !important;
+    font-size: 50px !important;
 }
 
 h2 {
@@ -119,7 +120,10 @@ label {
     color: rgb(40, 40, 107);
     font-size: 18px;
 }
-
+.footerLink {
+    margin-left: 8px;
+    margin-bottom: 8px;
+}
 /* @media (min-width: 576px) {  
  
 }
