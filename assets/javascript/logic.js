@@ -64,7 +64,7 @@ $("#portfolio-btn").on("click", function() {
        var projImage = element.image;
        var projUrl = element.url;
        
-       var hRef = $("<a>").attr("href", projUrl).attr("target", "blank");
+       var hRef = $("<a>").attr("href", projUrl).attr("target", "blank").addClass("col-md-6");
        var card = $("<div>").addClass("card projCard bg-dark text-white");
 
        
@@ -84,11 +84,11 @@ $("#portfolio-btn").on("click", function() {
        $(".modal-body").append(hRef);  
        
        function infoShow() {
-            $(cardOverlay).slideDown('slow');
+            $(cardOverlay).fadeIn('slow');
        };
 
        function infoHide() {
-           $(cardOverlay).slideUp('slow');
+           $(cardOverlay).fadeOut('slow');
        };
 
        $(hRef).hover(infoShow, infoHide);
@@ -100,7 +100,7 @@ $("#portfolio-btn").on("click", function() {
 
 $(".close-btn").on("click", function() {
     $("#aboutMeCard").show();
-    $(".modal").slideUp();
+    $(".modal").hide();
     $("#modalTitle").empty();
     $(".modal-body").empty();
     $(".submit-btn").remove();
@@ -113,7 +113,7 @@ $("#contact-btn").on("click", function() {
 
     $("#modalTitle").text("Contact Me");
 
-    var form = $("<form>");
+    var form = $("<form>").addClass("col-md-12");
 
     var nameForm = $("<div>").addClass("form-group");
     var nameLabel = $("<label>").attr("for", "nameInput").text("Name")
@@ -145,13 +145,11 @@ $("#contact-btn").on("click", function() {
 
     $("#submit").on("click", function(event) {
         event.preventDefault();
-        console.log("submit works");
         
         var nameInput = $("#nameInput").val().trim();
         var emailInput = $("#emailInput").val().trim();
         var textInput = $("#textInput").val().trim();
-    
-        
+            
         var newMessage = {
             name: nameInput,
             email: emailInput,
@@ -160,9 +158,7 @@ $("#contact-btn").on("click", function() {
     
         database.ref().push(newMessage);
     
-        alert("Thanks!  I'll be in touch soon!")
-    
-    
+        alert("Thanks!  I'll be in touch soon!");
     
         $("#nameInput").val("");
         $("#emailInput").val("");
