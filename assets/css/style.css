@@ -145,8 +145,7 @@ label {
     }
     .modal-content {
         min-width: 800px !important;
-        max-height: 70% !important;
-        margin-top: 43px !important;
+        margin-top: 65px !important;
     };
 };  
 
