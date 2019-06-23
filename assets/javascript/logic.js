@@ -105,6 +105,8 @@ $(".close-btn").on("click", function() {
     $(".modal-body").empty();
     $(".submit-btn").remove();
 
+    $("#thankYou").addClass("d-none");
+
 })
 
 $("#contact-btn").on("click", function() {
@@ -157,9 +159,9 @@ $("#contact-btn").on("click", function() {
         }
     
         database.ref().push(newMessage);
-    
-        alert("Thanks!  I'll be in touch soon!");
-    
+
+        $("#thankYou").removeClass("d-none");
+
         $("#nameInput").val("");
         $("#emailInput").val("");
         $("#textInput").val("");    

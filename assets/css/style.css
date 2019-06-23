@@ -124,6 +124,16 @@ label {
     margin-left: 8px;
     margin-bottom: 8px;
 }
+
+#thankYou {
+    background-color: rgb(40, 40, 107, .5);
+    color: whitesmoke;
+    border-radius: 10px;
+    margin: auto;
+    padding: 6px 20px 5px 20px;
+    font-family: 'Lobster', serif !important;
+
+}
 @media (min-width: 576px) {   
     footer.footer {
         position: absolute;
