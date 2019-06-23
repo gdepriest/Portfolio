@@ -105,7 +105,6 @@ $(".close-btn").on("click", function() {
     $(".modal-body").empty();
     $(".submit-btn").remove();
 
-    $("#thankYou").addClass("d-none");
 
 })
 
@@ -160,7 +159,12 @@ $("#contact-btn").on("click", function() {
     
         database.ref().push(newMessage);
 
-        $("#thankYou").removeClass("d-none");
+        var thankYou = $("<div>").attr("id", "thankYou").addClass("text-center");
+        var message = $("<h3>").text("Thanks!  I'll be in touch soon.  ❤ G");
+        $(thankYou).append(message);
+
+        $(".modal-body").prepend(thankYou);
+
 
         $("#nameInput").val("");
         $("#emailInput").val("");
@@ -170,3 +174,6 @@ $("#contact-btn").on("click", function() {
 
 })
 
+{/* <div class="d-none" id="thankYou">
+<h3>Thanks!  I'll be in touch soon.  ❤ G</h3>                    
+</div> */}
