@@ -124,8 +124,11 @@ label {
     margin-left: 8px;
     margin-bottom: 8px;
 }
-/* @media (min-width: 576px) {  
- 
+@media (min-width: 576px) {   
+    footer.footer {
+        position: absolute;
+        bottom: 0;
+    }
 }
  
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
@@ -150,6 +153,7 @@ label {
 };  
 
 #contentCont {
+    margin-bottom: 5%;
     flex: 1;
 };
 
