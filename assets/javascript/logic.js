@@ -4,8 +4,8 @@ var portfolioInfo = [
         name: "Node Alert - Liri-Bot",
         image: "assets/images/app-screencapture.PNG",
         url: "https://github.com/gdepriest/liri-node-app",
-        summary: "NodeJs project, which delivers movie, concert and song information with user input."
-    }
+        summary: "NodeJS project, which delivers movie, concert and song information with user input."
+    },
     {
         name: "Babes in Brunchland",
         image: "assets/images/brunchlandScreencapture.png",
