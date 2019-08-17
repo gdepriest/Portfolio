@@ -1,6 +1,30 @@
 //Global Variables
 var portfolioInfo = [
     {
+        name: "HER COSST",
+        image: "assets/images/project2AvgResCapture.png",
+        url: "https://hercosst2018.herokuapp.com/",
+        summary: "This app calculates an estimate of the percent of Colorado State sales tax revenue that was generated from female-specific items. It uses a Node and Express Web Server, is backed by a MySQL database, and uses ChartJS to display the data."
+    },
+    {
+        name: "Between Two Puns",
+        image: "assets/images/burgerAppScreencapture.png",
+        url: "https://lit-tor-96003.herokuapp.com/",
+        summary: "A burger ordering app, which uses MySQL, Node, Express, Handlebars and a homemade ORM."
+    },
+    {
+        name: "Friend Finder",
+        image: "assets/images/friendFinderCapture.png",
+        url: "https://friend-matcher31.herokuapp.com/",
+        summary: "Node & Express app that takes answers from users' surveys, then compares their answers with those from other users."
+    },
+    {
+        name: "BAMazon",
+        image: "assets/images/bamazonCapture.PNG",
+        url: "https://github.com/gdepriest/BAMazon",
+        summary: "NodeJS & MySQL project with 3 apps: customer, manager and supervisor."
+    },
+    {
         name: "Node Alert - Liri-Bot",
         image: "assets/images/app-screencapture.PNG",
         url: "https://github.com/gdepriest/liri-node-app",
@@ -9,7 +33,7 @@ var portfolioInfo = [
     {
         name: "Babes in Brunchland",
         image: "assets/images/brunchlandScreencapture.png",
-        url: "https://savannahisrael.github.io/BabesInBrunchland/index.html",
+        url: "https://savannahisrael.com/BabesInBrunchland/",
         summary: "UDEN Bootcamp Project 1: An app that delivers brunch options (with maps!) based on zip code and price point.",
     },
     {
